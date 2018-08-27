@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
     <!--TODO: canonical href需要替换成原页面url-->
     <link rel="canonical" href="https://www.example.com/your/path.html">
+    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
     <!--the css for jquery.mCustomScrollbar-->
     <link rel="stylesheet" href="dist/css/jquery.mCustomScrollbar.min.css"/>
     <!--the css for this plugin-->
@@ -23,6 +24,10 @@
 
         img.emoji_icon{
           width:30px
+        }
+
+        .container320{
+            display: none;
         }
 
         .nav{
@@ -264,242 +269,343 @@
             outline: none;
         }
 
+        @media (max-width:768px){
+            .container{
+                display: none;
+            }
+
+            .container320{
+                display: block;
+            }
+
+            /*导航*/
+
+            .backNav {
+                width: 100%;
+                height: 50px;
+                background: #333;
+            }
+
+            .myNav {
+                width: 100%;
+                height: 50px;
+                background: rgba(51, 51, 51, 0.9);
+                position: fixed;
+                z-index: 999;
+            }
+
+            .mip-nav-wrapper {
+                width: 1200px;
+                height: 50px;
+                margin: 0 auto;
+            }
+
+            .mip-nav-wrapper {
+                width: 100%;
+            }
+
+            .mobile-nav-block {
+                width: 25%;
+                padding-bottom: 20px;
+                text-align: center;
+                float: left;
+                margin-top: 50px;
+            }
+
+            .mobile-nav-block p {
+                margin-top: 10px;
+            }
+
+            .mobile-nav-block span {
+                font-size: 13px;
+                color: #fff;
+                letter-spacing: 2px;
+            }
+
+            .mobile-nav-block .iconfont {
+                font-size: 26px;
+                color: #fff;
+            }
+
+            mip-history.mip-history-default {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                background: none;
+                position: absolute;
+                top: 5px;
+                left: 0;
+                margin: 0;
+                padding: 0;
+            }
+
+            mip-history.mip-history-default .iconfont {
+                color: #FFF;
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
     </style>
 </head>
 <body>
-    <!--标题-->
-    <div class="nav">
-        <div class="nav-title">
-            <span>您正在咨询 神州数码-厦门SM广场店</span>
-        </div>
-        <div class="nav-end">
+    <div class="container">
+        <!--标题-->
+        <div class="nav">
+            <div class="nav-title">
+                <span>您正在咨询 神州数码-厦门SM广场店</span>
+            </div>
+            <div class="nav-end">
             <span class="nav-end-icon">
                 <mip-img
-                    layout="responsive"
-                    width="1"
-                    height="1"
-                    src="/img/customer_service_end.png">
+                        layout="responsive"
+                        width="1"
+                        height="1"
+                        src="/img/customer_service_end.png">
                 </mip-img>
             </span>
-            <span class="nav-end-info">结束对话</span>
+                <span class="nav-end-info">结束对话</span>
+            </div>
         </div>
-    </div>
-    <!--banner-->
-    <div class="banner">
-        <mip-img
-                layout="responsive"
-                width="1920"
-                height="325"
-                src="/img/customer_service_banner.jpg">
-        </mip-img>
+        <!--banner-->
+        <div class="banner">
+            <mip-img
+                    layout="responsive"
+                    width="1920"
+                    height="325"
+                    src="/img/customer_service_banner.jpg">
+            </mip-img>
+        </div>
+
+        <!--main-->
+        <main class="main">
+            <div class="main-container">
+                <div class="main-tip"><span>2018-8-10 09:23:23 请求了对话</span></div>
+                <div class="main-cell main-service-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <p class="title">
+                            <span class="service-name">在线客服08号-小雅</span>
+                            <span class="time">2018-08-04  12:33:06</span>
+                        </p>
+                        <p class="content">
+                            您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
+                            您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
+                            您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-customer-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <!--<p class="title">-->
+                        <!--<span class="service-name">在线客服08号-小雅</span>-->
+                        <!--<span class="time">2018-08-04  12:33:06</span>-->
+                        <!--</p>-->
+                        <p class="content">
+                            手机进水了，还可以修吗？1
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-service-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <p class="title">
+                            <span class="service-name">在线客服08号-小雅</span>
+                            <span class="time">2018-08-04  12:33:06</span>
+                        </p>
+                        <p class="content">
+                            您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-customer-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <!--<p class="title">-->
+                        <!--<span class="service-name">在线客服08号-小雅</span>-->
+                        <!--<span class="time">2018-08-04  12:33:06</span>-->
+                        <!--</p>-->
+                        <p class="content">
+                            手机进水了，还可以修吗？2
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-service-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"cc
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <p class="title">
+                            <span class="service-name">在线客服08号-小雅</span>
+                            <span class="time">2018-08-04  12:33:06</span>
+                        </p>
+                        <p class="content">
+                            您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-customer-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <!--<p class="title">-->
+                        <!--<span class="service-name">在线客服08号-小雅</span>-->
+                        <!--<span class="time">2018-08-04  12:33:06</span>-->
+                        <!--</p>-->
+                        <p class="content">
+                            手机进水了，还可以修吗？2
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-service-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <p class="title">
+                            <span class="service-name">在线客服08号-小雅</span>
+                            <span class="time">2018-08-04  12:33:06</span>
+                        </p>
+                        <p class="content">
+                            您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-customer-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <!--<p class="title">-->
+                        <!--<span class="service-name">在线客服08号-小雅</span>-->
+                        <!--<span class="time">2018-08-04  12:33:06</span>-->
+                        <!--</p>-->
+                        <p class="content">
+                            手机进水了，还可以修吗？2
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-service-cell">
+                    <div class="main-cell-head">
+                        <mip-img
+                                layout="responsive"
+                                width="1"
+                                height="1"
+                                src="/img/customer_service_logo.png">
+                        </mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <p class="title">
+                            <span class="service-name">在线客服08号-小雅</span>
+                            <span class="time">2018-08-04  12:33:06</span>
+                        </p>
+                        <p class="content">
+                            您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
+                        </p>
+                    </div>
+                </div>
+                <div class="main-cell main-customer-cell">
+                    <div class="main-cell-head">
+                        <mip-img layout="responsive" width="1" height="1" src="/img/customer_service_logo.png"></mip-img>
+                    </div>
+                    <div class="main-cell-info">
+                        <!--<p class="title">-->
+                        <!--<span class="service-name">在线客服08号-小雅</span>-->
+                        <!--<span class="time">2018-08-04  12:33:06</span>-->
+                        <!--</p>-->
+                        <p class="content">
+                            手机进水了，还可以修吗？2
+                        </p>
+                    </div>
+                </div>
+                <div class="main-tip"><span>客服已关闭会话，如需继续咨询，<a href="#">请重新连接客服</a></span></div>
+            </div>
+        </main>
+
+        <!--用户输入-->
+        <div class="input">
+            <div class="input-nav">
+                <img src="img/customer_service_logo.png" alt="" id="btn"/>
+                <!--onclick="document.getElementById('upload-txt').click()"-->
+                <img src="img/customer_service_logo.png" alt="" id="upload" />
+                <input type="file" hidden id="upload-txt" accept="image/*">
+            </div>
+            <div id="editor" class="input-txt" placeholder="请在此输入..." contenteditable="true"></div>
+            <button class="send">发送</button>
+        </div>
     </div>
 
-    <!--main-->
-    <main class="main">
-        <div class="main-container">
-            <div class="main-tip"><span>2018-8-10 09:23:23 请求了对话</span></div>
-            <div class="main-cell main-service-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <p class="title">
-                        <span class="service-name">在线客服08号-小雅</span>
-                        <span class="time">2018-08-04  12:33:06</span>
-                    </p>
-                    <p class="content">
-                        您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
-                        您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
-                        您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？
-                    </p>
-                </div>
+    <div class="container320">
+        <div class="backNav">
+            <div class="myNav">
+                <mip-apple-nav class="mip-nav-wrapper">
+                    <ul class="mobileNav">
+                        <mip-history history="back" class="mip-history-default">
+                            <i class="iconfont icon-fanhui"></i>
+                        </mip-history>
+                        <li>
+                            <mip-img class="logo" src="https://m.pgwxd.com/main/lnruLOW01sgir2e.png"></mip-img>
+                        </li>
+                        <li class=""><a href="./index.html" title="">Apple维修支持</a></li>
+                    </ul>
+                </mip-apple-nav>
             </div>
-            <div class="main-cell main-customer-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <!--<p class="title">-->
-                    <!--<span class="service-name">在线客服08号-小雅</span>-->
-                    <!--<span class="time">2018-08-04  12:33:06</span>-->
-                    <!--</p>-->
-                    <p class="content">
-                        手机进水了，还可以修吗？1
-                    </p>
-                </div>
-            </div>
-            <div class="main-cell main-service-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <p class="title">
-                        <span class="service-name">在线客服08号-小雅</span>
-                        <span class="time">2018-08-04  12:33:06</span>
-                    </p>
-                    <p class="content">
-                        您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
-                    </p>
-                </div>
-            </div>
-            <div class="main-cell main-customer-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <!--<p class="title">-->
-                    <!--<span class="service-name">在线客服08号-小雅</span>-->
-                    <!--<span class="time">2018-08-04  12:33:06</span>-->
-                    <!--</p>-->
-                    <p class="content">
-                        手机进水了，还可以修吗？2
-                    </p>
-                </div>
-            </div>
-            <div class="main-cell main-service-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"cc
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <p class="title">
-                        <span class="service-name">在线客服08号-小雅</span>
-                        <span class="time">2018-08-04  12:33:06</span>
-                    </p>
-                    <p class="content">
-                        您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
-                    </p>
-                </div>
-            </div>
-            <div class="main-cell main-customer-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <!--<p class="title">-->
-                    <!--<span class="service-name">在线客服08号-小雅</span>-->
-                    <!--<span class="time">2018-08-04  12:33:06</span>-->
-                    <!--</p>-->
-                    <p class="content">
-                        手机进水了，还可以修吗？2
-                    </p>
-                </div>
-            </div>
-            <div class="main-cell main-service-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <p class="title">
-                        <span class="service-name">在线客服08号-小雅</span>
-                        <span class="time">2018-08-04  12:33:06</span>
-                    </p>
-                    <p class="content">
-                        您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
-                    </p>
-                </div>
-            </div>
-            <div class="main-cell main-customer-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <!--<p class="title">-->
-                    <!--<span class="service-name">在线客服08号-小雅</span>-->
-                    <!--<span class="time">2018-08-04  12:33:06</span>-->
-                    <!--</p>-->
-                    <p class="content">
-                        手机进水了，还可以修吗？2
-                    </p>
-                </div>
-            </div>
-            <div class="main-cell main-service-cell">
-                <div class="main-cell-head">
-                    <mip-img
-                            layout="responsive"
-                            width="1"
-                            height="1"
-                            src="/img/customer_service_logo.png">
-                    </mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <p class="title">
-                        <span class="service-name">在线客服08号-小雅</span>
-                        <span class="time">2018-08-04  12:33:06</span>
-                    </p>
-                    <p class="content">
-                        您好，欢迎咨询Apple维修客服， 我是客服小雅，请问有什么可以帮助您呢？,
-                    </p>
-                </div>
-            </div>
-            <div class="main-cell main-customer-cell">
-                <div class="main-cell-head">
-                    <mip-img layout="responsive" width="1" height="1" src="/img/customer_service_logo.png"></mip-img>
-                </div>
-                <div class="main-cell-info">
-                    <!--<p class="title">-->
-                    <!--<span class="service-name">在线客服08号-小雅</span>-->
-                    <!--<span class="time">2018-08-04  12:33:06</span>-->
-                    <!--</p>-->
-                    <p class="content">
-                        手机进水了，还可以修吗？2
-                    </p>
-                </div>
-            </div>
-            <div class="main-tip"><span>客服已关闭会话，如需继续咨询，<a href="#">请重新连接客服</a></span></div>
         </div>
-    </main>
-    <div class="input">
-        <div class="input-nav">
-            <img src="img/customer_service_logo.png" alt="" id="btn"/>
-            <!--onclick="document.getElementById('upload-txt').click()"-->
-            <img src="img/customer_service_logo.png" alt="" id="upload" />
-            <input type="file" hidden id="upload-txt" accept="image/*">
-        </div>
-        <div id="editor" class="input-txt" placeholder="请在此输入..." contenteditable="true"></div>
-        <button class="send">发送</button>
     </div>
+
 <!--mip 运行环境-->
 <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
+<script src="https://c.mipcdn.com/static/v1/mip-apple-nav/mip-apple-nav.js"></script>
+<script src="https://c.mipcdn.com/static/v1/mip-history/mip-history.js"></script>
 <!--<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>-->
 <script src="dist/js/jquery.min.js"></script>
 <!--(Optional) the js for jquery.mCustomScrollbar's addon-->
