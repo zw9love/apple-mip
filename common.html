@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html mip>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>关注我们的服务号，有更多的动态信息_苹果维修点</title>
+    <meta name="keywords" content="苹果维修,apple维修，苹果售后，apple售后,手机维修,苹果售后电话，苹果售后维修点">
+    <meta name="description"
+          content="苹果维修点提供 iPhone手机、iPad平板、Apple Watch手表 和 Mac电脑等设备维修,授权苹果维修网点和苹果售后服务电话查询服务,通过电话或聊天以及在线预约方式帮助你提供查找更好的Apple支持门店。">
+    <link rel="icon" href="https://www.pgwxd.com/content/favicon.ico" type="image/png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
+    <link rel="canonical" href="https://www.baidu.com/">
+    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+    <style mip-custom>
+        /* 自定义样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input, button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        mip-apple-nav .mobileNav li {
+            color: #FFF;
+        }
+
+        .fc:after {
+            content: ".";
+            clear: both;
+            display: block;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        .fafa {
+            background: #FAFAFA;
+        }
+
+        li {
+            list-style: none;
+            list-style-type: none;
+        }
+
+        h2 {
+            height: 100px;
+            line-height: 100px;
+            color: #1A1A1A;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        .myNav .show {
+            display: block !important;
+        }
+
+        .mainContent {
+            width: 1200px;
+            padding-left: 20px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        /*导航*/
+        .backNav {
+            width: 100%;
+            height: 50px;
+            background: #333;
+        }
+
+        .myNav {
+            width: 100%;
+            height: 50px;
+            background: rgba(51, 51, 51, 0.9);
+            position: fixed;
+            z-index: 999;
+        }
+
+        .mip-nav-wrapper {
+            width: 1200px;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        /*Footer*/
+        .mobile_footer {
+            display: none;
+        }
+
+        .myFooter {
+            width: 1200px;
+            padding: 15px 0 15px 25px;
+            margin: 0 auto;
+        }
+
+        .myFooter .footer-title .title {
+            color: #555555 !important;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .myFooter .footer-title .iconfont {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .myFooter .content .fl {
+            width: 25%;
+            margin-top: 2%;
+        }
+
+        .myFooter .content .fl p {
+            font-size: 10px;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .myFooter .content .fl p a {
+            font-size: 10px;
+            color: #333333;
+        }
+
+        .myFooter a:hover {
+            text-decoration: underline;
+        }
+
+        .myFooter .more-info, .myFooter .more-info a {
+            font-size: 10px;
+            margin: 20px 0 10px 0;
+        }
+
+        .myFooter .more-info {
+            color: #878787;
+        }
+
+        .myFooter .more-info a {
+            color: #0070c9;
+        }
+
+        .myFooter .border {
+            background: #ddd;
+            height: 1px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .myFooter .copyright span {
+            font-size: 10px;
+            display: block;
+            color: #878787;
+            margin-top: 10px;
+        }
+
+        /*熊掌号*/
+        .bear_paw {
+            width: 97%;
+            margin: 20px auto;
+            padding: 20px 0 40px;
+            background: #fff;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #fafafa;
+            text-align: center;
+        }
+
+        .bear_paw mip-img {
+            width: 60px;
+            height: 60px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            margin-top: 26px;
+            margin-bottom: 10px;
+            margin: 0 auto;
+        }
+
+        .bear_paw p {
+            font-size: 14px;
+            color: #999;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        .bear_paw p a {
+            width: 120px;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 12px;
+            vertical-align: middle;
+            display: inline-block;
+            color: #fff;
+            background: #3897f0;
+            border-radius: 3px;
+        }
+
+        @media screen and (max-width: 1199px) {
+            h2 {
+                height: 70px;
+                line-height: 70px;
+            }
+
+            .mainContent {
+                width: 730px;
+            }
+
+            .mip-nav-wrapper {
+                width: 730px;
+            }
+
+            /*Footer*/
+            .myFooter {
+                width: 730px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            h2 {
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+            }
+
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .mainContent {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 4%;
+            }
+
+            /*导航*/
+            .mip-nav-wrapper {
+                width: 100%;
+            }
+
+            .mobile-nav-block {
+                width: 25%;
+                padding-bottom: 20px;
+                text-align: center;
+                float: left;
+                margin-top: 50px;
+            }
+
+            .mobile-nav-block p {
+                margin-top: 10px;
+            }
+
+            .mobile-nav-block span {
+                font-size: 13px;
+                color: #fff;
+                letter-spacing: 2px;
+            }
+
+            .mobile-nav-block .iconfont {
+                font-size: 26px;
+                color: #fff;
+            }
+
+            mip-history.mip-history-default {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                background: none;
+                position: absolute;
+                top: 5px;
+                left: 0;
+                margin: 0;
+                padding: 0;
+            }
+
+            mip-history.mip-history-default .iconfont {
+                color: #FFF;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            /*footer*/
+            .myFooter {
+                display: none;
+            }
+
+            .mobile_footer {
+                display: block
+            }
+
+            .mobile_footer .bottom {
+                width: 100%;
+                padding: 10px 0;
+                background: #F2F2F2;
+                text-align: center
+            }
+
+            .mobile_footer .bottom a {
+                font-size: 12px;
+            }
+
+            .mobile_footer .bottom p {
+                margin: 0 10px;
+                color: #c5c3c3;
+                font-size: 11px;
+                display: inline-block;
+            }
+
+            .mobile_footer .copyright {
+                width: 100%;
+                color: #FFF;
+                background: #999;
+                font-size: 12px;
+                text-align: center;
+                line-height: 20px;
+                padding: 10px 0;
+            }
+
+            .mobile_footer .copyright p {
+                color: #FFF;
+            }
+
+            .mobile_footer .copyright a {
+                color: #0070c9;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="backNav">
+    <div class="myNav">
+        <mip-apple-nav class="mip-nav-wrapper">
+            <ul class="pcNav">
+                <li><a href="./index.html">
+                    <mip-img class="logo" src="https://m.pgwxd.com/main/lnruLOW01sgir2e.png"></mip-img>
+                </a></li>
+                <li><a href="./iphone_service.html" title="">iPhone</a></li>
+                <li><a href="./iphone_service.html" title="">iPad</a></li>
+                <li><a href="./iphone_service.html" title="">Mac</a></li>
+                <li><a href="./iphone_service.html" title="">Watch</a></li>
+                <li class="regist"><a href="./regist.html" title="">快速注册</a></li>
+                <li class="login"><a href="./login.html" title="">请登录</a></li>
+            </ul>
+            <ul class="mobileNav">
+                <mip-history history="back" class="mip-history-default">
+                    <i class="iconfont icon-fanhui"></i>
+                </mip-history>
+                <li>
+                    <mip-img class="logo" src="https://m.pgwxd.com/main/lnruLOW01sgir2e.png"></mip-img>
+                </li>
+                <li class=""><a href="./index.html" title="">Apple授权苹果维修点</a></li>
+            </ul>
+            <div id="mobileNavList">
+                <a href="./service_order.html">
+                    <div class="mobile-nav-block">
+                        <p><i class="iconfont icon-gerenzhongxinkaobei"></i></p>
+                        <p><span>预约维修</span></p>
+                    </div>
+                </a>
+                <a href="./question.html">
+                    <div class="mobile-nav-block">
+                        <p><i class="iconfont icon-jiankangbaike"></i></p>
+                        <p><span>维修问答</span></p>
+                    </div>
+                </a>
+                <div class="mobile-nav-block">
+                    <mip-multiple-change-login class="open-mip-login">
+                        <p><i class="iconfont icon-gerenzhongxinkaobei"></i></p>
+                        <p><span>我的</span></p>
+                    </mip-multiple-change-login>
+                </div>
+                <a href="open_gongzhonghao">
+                    <div class="mobile-nav-block">
+                        <p><i class="iconfont icon-erweima1688"></i></p>
+                        <p><span>关注公众号</span></p>
+                    </div>
+                </a>
+            </div>
+        </mip-apple-nav>
+    </div>
+</div>
+
+<div class="fafa">
+    <div class="mainContent">
+
+    </div>
+</div>
+
+
+<div class="fafa">
+    <div class="myFooter">
+        <div class="footer-title">
+            <p class="title"><i class="iconfont icon-pingguo"></i>苹果官方维修</p>
+        </div>
+        <div class="content fc">
+            <div class="fl">
+                <p class="footer_sub_title">获得支持</p>
+                <p><a href="iphone_service.html">iPhone</a></p>
+                <p><a href="iphone_service.html">iPad</a></p>
+                <p><a href="iphone_service.html">Apple watch</a></p>
+                <p><a href="iphone_service.html">Mac</a></p>
+            </div>
+            <div class="fl">
+                <p class="footer_sub_title">服务与维修</p>
+                <p><a href="./apple_xielou.html">苹果维修视频泄漏</a></p>
+                <p><a href="./question.html">维修问答</a></p>
+            </div>
+            <div class="fl">
+                <p><a rel="nofollow" href="./privacy.html">隐私政策</a></p>
+                <p><a rel="nofollow" href="./terms.html">使用条款</a></p>
+                <p><a rel="nofollow" href="./sitemap.html">站点地图</a></p>
+            </div>
+            <div class="fl">
+                <p class="footer_sub_title">Connect</p>
+                <p><a rel="nofollow" href="./about.html">关于 Apple</a></p>
+                <!-- <a id="phone" title="苹果维修" href="https://m.pgwxd.com">触屏版</a> -->
+            </div>
+        </div>
+        <div class="more-info">更多苹果维修方式：前往 <a href="./index.html" title="苹果售后服务中心">苹果授权维修点</a>，致电 400-136-8800
+            或查找在你附近的Apple授权服务网点。
+        </div>
+        <div class="border"></div>
+        <div class="copyright">
+            <span class="copyrgt">Copyright © 2018苹果手机维修点 保留所有权利。</span>
+            <span class="copyrgt">京ICP备 18033189号-1</span>
+        </div>
+    </div>
+    <div class="mobile_footer">
+        <div class="bottom">
+            <div class="fc">
+                <a href="./privacy.html" rel="nofollow"><span>隐私政策</span></a>
+                <p>|</p><a href="./terms.html" rel="nofollow"><span>使用条款</span></a>
+                <p>|</p><a href="./sitemap.html" rel="nofollow"><span>网站地图</span></a>
+                <p>|</p><a href="https://www.pgwxd.com"><span>电脑版</span></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="">京ICP备 18033189号-1 <a href="./apple_xielou.html">苹果维修视频泄漏</a><br>Copyright © 2018苹果手机维修点 保留所有权利。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="bear_paw">
+    <p>
+        <mip-img layout="responsive" width="300" height="300" src="./img/bear_paw.jpeg" alt="熊掌号"></mip-img>
+    </p>
+    <h3>百邦创邺维修点查询</h3>
+    <p>各品牌手机授权维修点查询</p>
+    <p>
+        <a href="#">查看熊掌号</a>
+    </p>
+</div>
+
+<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
+<script src="https://c.mipcdn.com/static/v1/mip-apple-nav/mip-apple-nav.js"></script>
+<script src="https://c.mipcdn.com/static/v1/mip-history/mip-history.js"></script>
+</body>
+</html>
