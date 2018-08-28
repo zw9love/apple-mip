@@ -354,11 +354,16 @@
             }
 
             .banner320{
-
+                position: relative;
+                padding-top: 46.6667%;
             }
 
             .banner320 img{
                 width: 100%;
+                vertical-align: middle;
+                position: absolute;
+                left: 0;
+                top: 0
             }
 
             .connect-btn320{
@@ -451,8 +456,8 @@
             }
 
             .popup-emoji >span img{
-                width: 24px;
-                height: 24px;
+                width: 32px;
+                height: 32px;
                 vertical-align: middle;
                 /*padding: 0 10px*/
             }
@@ -905,6 +910,7 @@
                     <img src="img/customer_service_logo.png" alt="">
                 </div>
             </div>
+            <!--<p class="chat-end-info"></p>-->
             <!--<p class="chat-end-info">您的聊天会话已结束</p>-->
             <!--<p class="main-tip"><span>客服已关闭会话，如需继续咨询，<a href="#">请重新连接客服</a></span></p>-->
             <!--<div class="connect-btn320">-->
@@ -1001,7 +1007,7 @@
                  icons: [{
                      name: "QQ表情",
                      path: "dist/img/qq/",
-                     maxNum: 50,
+                     maxNum: 75,
                      // excludeNums: [41, 45, 54],
                      file: ".gif",
                  }]
@@ -1011,11 +1017,11 @@
                  getMainHeight()
              })
          } else {
-
              let windowHeight = window.innerHeight
-             let bannerHeight = $(".banner320").height()
+             let bannerHeight = parseInt($(".banner320").css('paddingTop'))
              let mainHeight = windowHeight - bannerHeight - 50
              $('.main320').height(mainHeight)
+             // $('.chat-end-info').html('bannerHeight = ' + bannerHeight)
              let emojiSrc = {
                  '[hehe]': 'dist/img/qq/1.gif'
              }
@@ -1072,11 +1078,11 @@
                  50: "OK"
              }
 
-
-             for (let i = 1; i < 51; i++) {
+             for (let i = 1; i <= 75; i++) {
+                 //<img src="dist/img/qq/${emojiAlias[i]}.gif" alt="" data-alias="[${emojiAlias[i]}]">
                  $('.popup-emoji').append(`
                     <span>
-                        <img src="dist/img/qq/${emojiAlias[i]}.gif" alt="" data-alias="[${emojiAlias[i]}]">
+                        <img src="dist/img/qq/${i}.gif" alt="" data-alias="[${i}]">
                     </span>
                  `)
              }
@@ -1203,9 +1209,11 @@
          })
 
          $('.input-txt320').focus(function (e) {
-             e.stopPropagation();
-             console.log(111)
-             document.querySelector('body').style.height = '99999px';
+             e.stopPropagation()
+             // console.log(111)
+             setTimeout(function(){
+                 $('body').scrollTop(1000000)
+             }, 100)
          })
 
          $('.upload-txt320, .camera-txt').change(function (e) {
