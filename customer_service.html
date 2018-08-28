@@ -16,7 +16,13 @@
     <style mip-custom>
         *{
             box-sizing: border-box;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
+
+        /*input:focus{*/
+            /*position:fixed;*/
+            /*top:50px;*/
+        /*}*/
 
         img{
             vertical-align: middle;
@@ -355,6 +361,27 @@
                 width: 100%;
             }
 
+            .connect-btn320{
+                position: fixed;
+                left:50%;
+                transform: translateX(-50%);
+                height: 40px;
+                width: calc(100% -  34px);
+                background-color: #0077cc;
+                bottom: 30px;
+                border-radius: 3px;
+                text-align: center;
+                /*margin: 30px auto*/
+                display: none;
+            }
+
+            .connect-btn320 span{
+                color: #fff;
+                font-size: 14px;
+                font-family: "PingFangSC-Regular";
+                line-height: 40px;
+            }
+
             .input320{
                 position: fixed;
                 width: 100%;
@@ -396,6 +423,7 @@
                 border: none;
                 padding: 0 15px;
                 line-height: 30px;
+                font-size: 12px;
                 /*overflow: hidden;*/
             }
 
@@ -469,6 +497,15 @@
                 padding: 0 10px;
             }
 
+            .chat-end-info{
+                text-align: center;
+                color: #666;
+                font-family: "PingFangSC-Regular";
+                font-size: 12px;
+                margin-top: 50px;
+                font-weight: 600;
+            }
+
             .main320 .store-info{
                 font-family: "PingFangSC-Regular";
                 font-size: 12px;
@@ -521,6 +558,7 @@
 
             .main-customer-cell320{
                 justify-content: flex-end;
+                border: none;
             }
 
             .main-customer-cell320 .main-cell-info{
@@ -572,13 +610,13 @@
             }
 
             .send320{
-                width: 70px;
+                width: 60px;
                 height: 30px;
                 border: 1px solid #126fc9;
                 outline: none;
-                background-color: transparent;
+                background-color: #0077cc;
                 border-radius: 3px;
-                color: #126fc9;
+                color: #fff;
             }
 
         }
@@ -867,12 +905,17 @@
                     <img src="img/customer_service_logo.png" alt="">
                 </div>
             </div>
+            <!--<p class="chat-end-info">您的聊天会话已结束</p>-->
             <!--<p class="main-tip"><span>客服已关闭会话，如需继续咨询，<a href="#">请重新连接客服</a></span></p>-->
+            <!--<div class="connect-btn320">-->
+                <!--<span>重新连接</span>-->
+            <!--</div>-->
         </main>
 
-
-
-        <!--底部输入-->
+        <!--底部输入和按钮-->
+        <div class="connect-btn320">
+            <span>重新连接</span>
+        </div>
         <div class="input320">
             <div class="operation">
                 <img src="img/smile.png" alt="" id="btn320">
@@ -1118,7 +1161,8 @@
              }
          })
 
-         $('.main320').click(function(){
+         $('.main320').click(function(e){
+             e.stopPropagation()
              $('.input320').css({bottom: '-125px'})
              $('.main320').css({paddingBottom: '0px'})
          })
