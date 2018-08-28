@@ -2,7 +2,7 @@
 <html mip>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=0' ">
     <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
     <!--TODO: canonical href需要替换成原页面url-->
     <link rel="canonical" href="https://www.example.com/your/path.html">
@@ -276,6 +276,8 @@
 
             .container320{
                 display: block;
+                /*overflow-x: hidden;*/
+                /*overflow-y: auto;*/
             }
 
             /*导航*/
@@ -344,6 +346,241 @@
                 font-size: 24px;
                 font-weight: 600;
             }
+
+            .banner320{
+
+            }
+
+            .banner320 img{
+                width: 100%;
+            }
+
+            .input320{
+                position: fixed;
+                width: 100%;
+                bottom: -125px;
+                left:0;
+                transition: all 300ms ease;
+            }
+
+            #editor320 img{
+                width: 24px;
+                height: 24px
+            }
+
+            .operation{
+                height: 50px;
+                background-color: #f3f3f3;
+                padding:0 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .operation img:first-child{
+                margin-right: 10px;
+            }
+
+            .operation >img{
+                width:35px;
+                height: 35px;
+            }
+
+            .operation >#editor320{
+                height:30px;
+                flex: 1;
+                margin: 0 10px;
+                background-color: #fff;
+                border-radius: 20px;
+                outline: none;
+                border: none;
+                padding: 0 15px;
+                line-height: 30px;
+                /*overflow: hidden;*/
+            }
+
+            .popup{
+                background-color: #f3f3f3;
+                height: 125px;
+            }
+
+            .popup-emoji{
+                display: flex;
+                /*justify-content: space-between;*/
+                padding: 0 10px;
+                flex-wrap: wrap;
+                height: 114px;
+                overflow-y:  auto;
+                margin-bottom: 11px;
+                background-color: #f3f3f3;
+            }
+
+            .popup-emoji >span{
+                display: flex;
+                width: 11.11%;
+                justify-content: center;
+                margin-top: 5px;
+            }
+
+            .popup-emoji >span img{
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+                /*padding: 0 10px*/
+            }
+
+            .popup-photo{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 100%;
+            }
+
+            .popup-photo .popup-photo-cell{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .popup-photo .popup-photo-cell >span.popup-photo-info{
+                margin-top: 10px;
+                font-family: PingFangSC-Regular;
+                color: #333;
+                font-size: 12px;
+            }
+
+            .popup-photo .popup-photo-cell>span.popup-photo-img{
+                display: flex;
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 2px;
+            }
+
+            .popup-photo .popup-photo-cell>span.popup-photo-img img{
+                width: 20px;
+                height: 20px;
+            }
+
+            .main320{
+                padding: 0 10px;
+            }
+
+            .main320 .store-info{
+                font-family: "PingFangSC-Regular";
+                font-size: 12px;
+                color: #666;
+                text-align: center;
+                margin: 30px 0;
+            }
+            .main-cell320{
+                display: flex;
+                margin: 30px 0;
+                position: relative;
+            }
+            .main-cell320 >img{
+                width: 40px;
+                height: 40px;
+                margin-right: 20px;
+                margin-top: 10px;
+                margin-left: 0;
+            }
+
+            .main-cell-info{
+                max-width: 250px;
+                border: 1px solid #ccc;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .main-cell-info >p.name{
+                color: #999;
+                font-family: PingFangSC-Regular;
+                font-size: 12px;
+            }
+
+            .main-cell-info >p.content{
+                margin-top: 10px;
+                color: #333;
+                font-family: PingFangSC-Regular;
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 600;
+            }
+
+            .main-cell-info >p.content img:not(.upload-img){
+                width: 24px;
+            }
+
+            .main-cell-info >p.content img.upload-img{
+                width: 100%;
+            }
+
+            .main-customer-cell320{
+                justify-content: flex-end;
+            }
+
+            .main-customer-cell320 .main-cell-info{
+                margin-right: 10px;
+                background-color: #42a1ec;
+            }
+
+            .main-customer-cell320 .main-cell-info >p.content{
+                color: #fff;
+                margin-top: 0px;
+                font-weight: 400;
+            }
+
+            .main-customer-cell320 >img{
+                margin: 0;
+                margin-left: 10px;
+            }
+
+            .main-service-cell320:before{
+                content: "";
+                position: absolute;
+                left: 50px;
+                top: 25px;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-right: 10px solid #ccc;
+            }
+
+            .main-service-cell320:after{
+                content: "";
+                position: absolute;
+                left: 52px;
+                top: 25px;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-right: 10px solid #fff;
+            }
+
+            .main-customer-cell320:after{
+                content: "";
+                position: absolute;
+                right: 51px;
+                top: 15px;
+                width:0;
+                height:0;
+                border-width:5px 0 5px 10px;
+                border-style:solid;
+                border-color:transparent transparent transparent #42a1ec;/*透明 黄 透明 透明 */
+            }
+
+            .send320{
+                width: 70px;
+                height: 30px;
+                border: 1px solid #126fc9;
+                outline: none;
+                background-color: transparent;
+                border-radius: 3px;
+                color: #126fc9;
+            }
+
         }
     </style>
 </head>
@@ -462,7 +699,7 @@
                     <div class="main-cell-head">
                         <mip-img
                                 layout="responsive"
-                                width="1"cc
+                                width="1"
                                 height="1"
                                 src="/img/customer_service_logo.png">
                         </mip-img>
@@ -585,27 +822,98 @@
     </div>
 
     <div class="container320">
-        <div class="backNav">
-            <div class="myNav">
-                <mip-apple-nav class="mip-nav-wrapper">
-                    <ul class="mobileNav">
-                        <mip-history history="back" class="mip-history-default">
-                            <i class="iconfont icon-fanhui"></i>
-                        </mip-history>
-                        <li>
-                            <mip-img class="logo" src="https://m.pgwxd.com/main/lnruLOW01sgir2e.png"></mip-img>
-                        </li>
-                        <li class=""><a href="./index.html" title="">Apple维修支持</a></li>
-                    </ul>
-                </mip-apple-nav>
+        <!--导航-->
+        <!--<div class="backNav">-->
+            <!--<div class="myNav">-->
+                <!--<mip-apple-nav class="mip-nav-wrapper">-->
+                    <!--<ul class="mobileNav">-->
+                        <!--<mip-history history="back" class="mip-history-default">-->
+                            <!--<i class="iconfont icon-fanhui"></i>-->
+                        <!--</mip-history>-->
+                        <!--<li>-->
+                            <!--<mip-img class="logo" src="https://m.pgwxd.com/main/lnruLOW01sgir2e.png"></mip-img>-->
+                        <!--</li>-->
+                        <!--<li class=""><a href="./index.html" title="">Apple维修支持</a></li>-->
+                    <!--</ul>-->
+                <!--</mip-apple-nav>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--banner-->
+        <div class="banner320">
+            <img src="img/customer_service_banner320.png" alt="">
+        </div>
+
+        <main class="main320">
+            <div class="main-container320">
+                <p class="store-info">您正在咨询深圳数码-南山店</p>
+                <div class="main-cell320 main-service-cell320">
+                    <img src="img/customer_service_logo.png" alt="">
+                    <div class="main-cell-info">
+                        <p class="name">在线客服08号-小张</p>
+                        <p class="content">
+                            您好，欢迎咨询Apple维修客服， 我是客服
+                            小张，请问有什么可以帮助您呢？
+                        </p>
+                    </div>
+                </div>
+
+                <p class="store-info">2018-08-04  12:33:06</p>
+                <div class="main-cell320 main-customer-cell320">
+                    <div class="main-cell-info">
+                        <p class="content">
+                            手机进水了，还可以修吗？2
+                        </p>
+                    </div>
+                    <img src="img/customer_service_logo.png" alt="">
+                </div>
+            </div>
+            <!--<p class="main-tip"><span>客服已关闭会话，如需继续咨询，<a href="#">请重新连接客服</a></span></p>-->
+        </main>
+
+
+
+        <!--底部输入-->
+        <div class="input320">
+            <div class="operation">
+                <img src="img/smile.png" alt="" id="btn320">
+                <img src="img/add.png" alt="" class="add">
+                <!--<input id="editor320" class="input-txt320" placeholder="请在此输入111..." type="search" autocomplete="off" autocomplete="off">-->
+                <input id="editor320" class="input-txt320" placeholder="请在此输入..." type=input>
+                <!--<textarea id="editor320" class="input-txt320" placeholder="请在此输入..."></textarea>-->
+                <button class="send320">发送</button>
+            </div>
+            <div class="popup">
+                <div class="popup-emoji"></div>
+                <div class="popup-photo">
+                    <div class="popup-photo-cell">
+                         <span class="popup-photo-img">
+                            <img src="img/write.png" alt="">
+                        </span>
+                        <span class="popup-photo-info">预约到店</span>
+                    </div>
+                    <div class="popup-photo-cell" >
+                        <span class="popup-photo-img" id="photo-wrapper">
+                            <img src="img/photo.png" alt="">
+                        </span>
+                        <span class="popup-photo-info">相册</span>
+                        <input type="file" accept="image/*" class="upload-txt320" hidden>
+                    </div>
+                    <div class="popup-photo-cell" >
+                        <span class="popup-photo-img" id="camera-wrapper">
+                            <img src="img/camera.png" alt="">
+                        </span>
+                        <span class="popup-photo-info">拍照</span>
+                        <input type="file" accept="image/*" capture="camera" class="camera-txt" hidden>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 <!--mip 运行环境-->
 <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip-apple-nav/mip-apple-nav.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip-history/mip-history.js"></script>
+<!--<script src="https://c.mipcdn.com/static/v1/mip-apple-nav/mip-apple-nav.js"></script>-->
+<!--<script src="https://c.mipcdn.com/static/v1/mip-history/mip-history.js"></script>-->
 <!--<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>-->
 <script src="dist/js/jquery.min.js"></script>
 <!--(Optional) the js for jquery.mCustomScrollbar's addon-->
@@ -624,29 +932,122 @@
         $('.main').height(mainHeight)
     }
 
-     $(document).ready(function(){
-         getMainHeight()
-         $(window).resize(function(){
+    function getDouble(val){
+        val = val + ''
+        if(val.length > 1){
+            return val
+        }else{
+            return '0' + val
+        }
+    }
+
+    function getTime(){
+
+        let date = new Date()
+
+        return date.getFullYear() + '-' + getDouble(date.getMonth() + 1) + '-' + getDouble(date.getDate()) + ' ' + getDouble(date.getHours()) + ':' + getDouble(date.getMinutes())  + ':' + getDouble(date.getSeconds())
+    }
+
+     $(document).ready(function() {
+         if ($(window).width() > 768) {
+             $("#editor").emoji({
+                 button: "#btn",
+                 showTab: true,
+                 animation: 'slide',
+                 position: 'topRight',
+                 icons: [{
+                     name: "QQ表情",
+                     path: "dist/img/qq/",
+                     maxNum: 50,
+                     // excludeNums: [41, 45, 54],
+                     file: ".gif",
+                 }]
+             })
              getMainHeight()
-         })
+             $(window).resize(function () {
+                 getMainHeight()
+             })
+         } else {
 
-         $("#editor").emoji({
-             button: "#btn",
-             showTab: false,
-             animation: 'slide',
-             position: 'topRight',
-             icons: [{
-                 name: "QQ表情",
-                 path: "dist/img/qq/",
-                 maxNum: 91,
-                 excludeNums: [41, 45, 54],
-                 file: ".gif"
-             }]
-         });
+             let windowHeight = window.innerHeight
+             let bannerHeight = $(".banner320").height()
+             let mainHeight = windowHeight - bannerHeight - 50
+             $('.main320').height(mainHeight)
+             let emojiSrc = {
+                 '[hehe]': 'dist/img/qq/1.gif'
+             }
+             let emojiAlias = {
+                 1: "hehe",
+                 2: "haha",
+                 3: "tushe",
+                 4: "a",
+                 5: "ku",
+                 6: "lu",
+                 7: "kaixin",
+                 8: "han",
+                 9: "lei",
+                 10: "heixian",
+                 11: "bishi",
+                 12: "bugaoxing",
+                 13: "zhenbang",
+                 14: "qian",
+                 15: "yiwen",
+                 16: "yinxian",
+                 17: "tu",
+                 18: "yi",
+                 19: "weiqu",
+                 20: "huaxin",
+                 21: "hu",
+                 22: "xiaonian",
+                 23: "neng",
+                 24: "taikaixin",
+                 25: "huaji",
+                 26: "mianqiang",
+                 27: "kuanghan",
+                 28: "guai",
+                 29: "shuijiao",
+                 30: "jinku",
+                 31: "shengqi",
+                 32: "jinya",
+                 33: "pen",
+                 34: "aixin",
+                 35: "xinsui",
+                 36: "meigui",
+                 37: "liwu",
+                 38: "caihong",
+                 39: "xxyl",
+                 40: "taiyang",
+                 41: "qianbi",
+                 42: "dnegpao",
+                 43: "chabei",
+                 44: "dangao",
+                 45: "yinyue",
+                 46: "haha2",
+                 47: "shenli",
+                 48: "damuzhi",
+                 49: "ruo",
+                 50: "OK"
+             }
 
-         $('.send').click(function(){
+
+             for (let i = 1; i < 51; i++) {
+                 $('.popup-emoji').append(`
+                    <span>
+                        <img src="dist/img/qq/${emojiAlias[i]}.gif" alt="" data-alias="[${emojiAlias[i]}]">
+                    </span>
+                 `)
+             }
+
+             $('.popup-emoji').on("click", "span", function () {
+                 // $('#editor320').append(`<img src="${$(this).children()[0].src}"/>`)
+                 let alias = $(this).children().attr('data-alias')
+                 $('.input-txt320').val($('.input-txt320').val() + alias)
+             })
+         }
+
+         $('.send').click(function () {
              let txtVal = $('.input-txt').html()
-             if(txtVal.trim()){
+             if (txtVal.trim()) {
                  $('.main-container').append(`
                     <div class="main-cell main-customer-cell">
                         <div class="main-cell-head">
@@ -660,17 +1061,17 @@
                     </div>
                 `)
                  $('.input-txt').html('')
-                 setTimeout(function(){
+                 setTimeout(function () {
                      $(".main").scrollTop($(".main-container").height())
                  }, 0)
              }
          })
 
-         $('.input-txt').keydown(function(e){
-             if(e.keyCode === 13 && e.ctrlKey){
+         $('.input-txt').keydown(function (e) {
+             if (e.keyCode === 13 && e.ctrlKey) {
                  // 这里实现换行
                  $('.input-txt').val($('.input-txt').val() + "\n")
-             }else if(e.keyCode === 13){
+             } else if (e.keyCode === 13) {
                  // 避免回车键换行
                  e.preventDefault();
                  // 下面写你的发送消息的代码
@@ -678,36 +1079,157 @@
              }
          })
 
-         $('#upload').click(function(){
+         $('#upload').click(function () {
              $('#upload-txt').click()
          })
 
-         $('#upload-txt').change(function(e){
-             var reads = new FileReader();
-             var file = e.target.files[0];
-             if(file){
+
+         $('#upload-txt').change(function (e) {
+             let reads = new FileReader();
+             let file = e.target.files[0];
+             if (file) {
                  reads.readAsDataURL(file);
-                 reads.onload = function() {
-                     // var img=new Image();
-                     // img.src = this.result
-                    $('.main-container').append(`
-                        <div class="main-cell main-customer-cell">
-                            <div class="main-cell-head">
-                                <mip-img layout="responsive" width="1" height="1" src="/img/customer_service_logo.png"></mip-img>
+                 reads.onload = function () {
+                     let img = new Image()
+                     let result = this.result
+                     img.src = result
+                     img.onload = function () {
+                         let width = this.width < 800 ? this.width : 800
+                         //  <span style="width: ${width}px; display: inline-block">
+                         //     <mip-img layout="responsive" width="${width}" height="${this.height}" popup src="${result}"></mip-img>
+                         // </span>
+                         $('.main-container').append(`
+                            <div class="main-cell main-customer-cell">
+                                <div class="main-cell-head">
+                                    <mip-img layout="responsive" width="1" height="1" src="/img/customer_service_logo.png"></mip-img>
+                                </div>
+                                <div class="main-cell-info">
+                                    <p class="content">
+                                        <img src="${result}" alt="" style="width: ${width}px;">
+                                    </p>
+                                </div>
                             </div>
-                            <div class="main-cell-info">
-                                <p class="content">
-                                    <img src="${this.result}" alt="">
-                                </p>
-                            </div>
-                        </div>
-                     `)
-                     setTimeout(function(){$(".main").scrollTop($(".main-container").height())}, 0)
+                         `)
+                         setTimeout(function () {
+                             $(".main").scrollTop($(".main-container").height())
+                         }, 0)
+                     }
                  }
              }
          })
-     })
 
+         $('.main320').click(function(){
+             $('.input320').css({bottom: '-125px'})
+             $('.main320').css({paddingBottom: '0px'})
+         })
+
+         $('#btn320').click(function (e) {
+             e.stopPropagation();
+             $('.popup-photo').css({display: 'none'})
+             $('.popup-emoji').css({display: 'flex'})
+             $('.input320').css({bottom: '0px'})
+             $('.main320').css({paddingBottom: '125px'})
+             setTimeout(function () {
+                 $(".main320").scrollTop($(".main-container320").height())
+             }, 0)
+         })
+
+         $('.add').click(function (e) {
+             e.stopPropagation();
+             $('.popup-emoji').css({display: 'none'})
+             $('.popup-photo').css({display: 'flex'})
+             $('.input320').css({bottom: '0px'})
+             $('.main320').css({paddingBottom: '125px'})
+             setTimeout(function () {
+                 $(".main320").scrollTop($(".main-container320").height())
+             }, 0)
+         })
+
+         $('.popup').click(function (e) {
+             e.stopPropagation();
+         })
+
+         $('#photo-wrapper').click(function () {
+             // console.log($('.upload-txt320'))
+             $('.upload-txt320').click()
+         })
+
+         $('#camera-wrapper').click(function () {
+             $('.camera-txt').click()
+         })
+
+         $('.input-txt320').focus(function (e) {
+             e.stopPropagation();
+             console.log(111)
+             document.querySelector('body').style.height = '99999px';
+         })
+
+         $('.upload-txt320, .camera-txt').change(function (e) {
+             let reads = new FileReader();
+             let file = e.target.files[0];
+             if (file) {
+                 reads.readAsDataURL(file)
+                 reads.onload = function () {
+                     let img = new Image()
+                     let result = this.result
+                     img.src = result
+                     img.onload = function () {
+                         let width = this.width < 230 ? this.width : 230
+                         $('.main-container320').append(`
+                             <p class="store-info">${getTime()}</p>
+                             <div class="main-cell320 main-customer-cell320">
+                             <div class="main-cell-info">
+                             <p class="content">
+                                <!--<img src="${this.result}" alt="" class="upload-img">-->
+                                <span style="width: ${width}px; display: inline-block">
+                                    <mip-img layout="responsive" width="${this.width}" height="${this.height}" popup src="${result}"></mip-img>
+                                </span>
+                             </p>
+                             </div>
+                                <img src="img/customer_service_logo.png" alt="">
+                             </div>
+                         `)
+                         setTimeout(function () {
+                             $(".main320").scrollTop($(".main-container320").height())
+                         }, 0)
+                     }
+                 }
+             }
+         })
+
+
+         $('.send320').click(function (e) {
+             e.stopPropagation();
+             // let txtVal = $('.input-txt320').html()
+             let txtVal = $('.input-txt320').val()
+             let reg = /\[([^\]]+)\]/g;
+             // let str = 'aaaabbbbcc[hehe][haha]dddd[haha1]eeeee';
+             txtVal = txtVal.replace(reg, "<img src='dist/img/qq/$1.gif' border='0' />");
+             if (txtVal.trim()) {
+                 $('.main-container320').append(`
+                    <p class="store-info">${getTime()}</p>
+                    <div class="main-cell320 main-customer-cell320">
+                        <div class="main-cell-info">
+                            <p class="content">
+                                ${txtVal}
+                            </p>
+                        </div>
+                        <img src="img/customer_service_logo.png" alt="">
+                    </div>
+                `)
+                 // $('.input-txt320').html('')
+                 $('.input-txt320').val('')
+                 setTimeout(function () {
+                     $(".main320").scrollTop($(".main-container320").height())
+                 }, 0)
+             }
+         })
+
+         $(window).click(function () {
+             $('.input320').css({bottom: '-125px'})
+             $('.main320').css({paddingBottom: '0px'})
+         })
+     })
 </script>
 </body>
 </html>
