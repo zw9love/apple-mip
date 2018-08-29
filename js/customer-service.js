@@ -1,7 +1,8 @@
 let ws = null
 
 // let server = 'ws://192.168.1.151:9090/'
-let server = 'ws://192.168.1.125:9090/'
+// let server = 'ws://192.168.1.125:9090/'
+let server = 'ws://192.168.0.103:9090/'
 
 // function WebSocketTest() {
 //     if ("WebSocket" in window) {
@@ -73,10 +74,13 @@ $(document).ready(function () {
             position: 'topRight',
             icons: [{
                 name: "QQ表情",
-                path: "dist/img/qq/",
-                maxNum: 75,
-                // excludeNums: [41, 45, 54],
-                file: ".gif",
+                // path: "dist/img/qq/",
+                // maxNum: 75,
+                // // excludeNums: [41, 45, 54],
+                // file: ".gif",
+                path: "dist/img/emoji/",
+                maxNum: 84,
+                file: ".png",
             }]
         })
         getMainHeight()
@@ -96,11 +100,12 @@ $(document).ready(function () {
         //     41: "qianbi", 42: "dnegpao", 43: "chabei", 44: "dangao", 45: "yinyue", 46: "haha2", 47: "shenli", 48: "damuzhi", 49: "ruo", 50: "OK"
         // }
 
-        for (let i = 1; i <= 75; i++) {
+        for (let i = 1; i <= 84; i++) {
             //<img src="dist/img/qq/${emojiAlias[i]}.gif" alt="" data-alias="[${emojiAlias[i]}]">
+            // <img src="dist/img/qq/${i}.gif" alt="" data-alias="[${i}]">
             $('.popup-emoji').append(`
                     <span>
-                        <img src="dist/img/qq/${i}.gif" alt="" data-alias="[${i}]">
+                        <img src="dist/img/emoji/${i}.png" alt="" data-alias="[${i}]">
                     </span>
                  `)
         }
@@ -354,7 +359,8 @@ $(document).ready(function () {
                 let time = getTime()
                 let reg = /\[([^\]]+)\]/g;
                 // let str = 'aaaabbbbcc[hehe][haha]dddd[haha1]eeeee';
-                txtVal = txtVal.replace(reg, "<img src='dist/img/qq/$1.gif' border='0' />");
+                // txtVal = txtVal.replace(reg, "<img src='dist/img/qq/$1.gif' border='0' />");
+                txtVal = txtVal.replace(reg, "<img src='dist/img/emoji/$1.png' border='0' />");
                 if (txtVal.trim()) {
                     $('.main-container320').append(`
                     <p class="store-info">${time}</p>
