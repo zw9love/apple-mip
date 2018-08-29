@@ -847,7 +847,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="main-tip"><span>客服已关闭会话，如需继续咨询，<a href="#">请重新连接客服</a></span></div>
+                <!--<div class="main-tip"><span>客服已关闭会话，如需继续咨询，<a href="#">请重新连接客服</a></span></div>-->
             </div>
         </main>
 
@@ -866,25 +866,25 @@
 
     <div class="container320">
         <!--导航-->
-        <!--<div class="backNav">-->
-            <!--<div class="myNav">-->
-                <!--<mip-apple-nav class="mip-nav-wrapper">-->
-                    <!--<ul class="mobileNav">-->
-                        <!--<mip-history history="back" class="mip-history-default">-->
-                            <!--<i class="iconfont icon-fanhui"></i>-->
-                        <!--</mip-history>-->
-                        <!--<li>-->
-                            <!--<mip-img class="logo" src="https://m.pgwxd.com/main/lnruLOW01sgir2e.png"></mip-img>-->
-                        <!--</li>-->
-                        <!--<li class=""><a href="./index.html" title="">Apple维修支持</a></li>-->
-                    <!--</ul>-->
-                <!--</mip-apple-nav>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--banner-->
-        <div class="banner320">
-            <img src="img/customer_service_banner320.png" alt="">
+        <div class="backNav">
+            <div class="myNav">
+                <mip-apple-nav class="mip-nav-wrapper">
+                    <ul class="mobileNav">
+                        <mip-history history="back" class="mip-history-default">
+                            <i class="iconfont icon-fanhui"></i>
+                        </mip-history>
+                        <li>
+                            <mip-img class="logo" src="https://m.pgwxd.com/main/lnruLOW01sgir2e.png"></mip-img>
+                        </li>
+                        <li class=""><a href="./index.html" title="">Apple维修支持</a></li>
+                    </ul>
+                </mip-apple-nav>
+            </div>
         </div>
+        <!--banner-->
+        <!--<div class="banner320">-->
+            <!--<img src="img/customer_service_banner320.png" alt="">-->
+        <!--</div>-->
 
         <main class="main320">
             <div class="main-container320">
@@ -929,7 +929,9 @@
                 <!--<input id="editor320" class="input-txt320" placeholder="请在此输入111..." type="search" autocomplete="off" autocomplete="off">-->
                 <input id="editor320" class="input-txt320" placeholder="请在此输入..." type=input>
                 <!--<textarea id="editor320" class="input-txt320" placeholder="请在此输入..."></textarea>-->
-                <button class="send320">发送</button>
+                <!--<button class="send320">发送</button>-->
+                <!--<button id="openwebsocket">开启</button>-->
+                <button class="send320" id="send">发送</button>
             </div>
             <div class="popup">
                 <div class="popup-emoji"></div>
@@ -961,8 +963,8 @@
 
 <!--mip 运行环境-->
 <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<!--<script src="https://c.mipcdn.com/static/v1/mip-apple-nav/mip-apple-nav.js"></script>-->
-<!--<script src="https://c.mipcdn.com/static/v1/mip-history/mip-history.js"></script>-->
+<script src="https://c.mipcdn.com/static/v1/mip-apple-nav/mip-apple-nav.js"></script>
+<script src="https://c.mipcdn.com/static/v1/mip-history/mip-history.js"></script>
 <!--<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>-->
 <script src="dist/js/jquery.min.js"></script>
 <!--(Optional) the js for jquery.mCustomScrollbar's addon-->
@@ -971,317 +973,6 @@
 <script src="dist/js/jquery.mCustomScrollbar.min.js"></script>
 <!--the js for this plugin-->
 <script src="dist/js/jquery.emoji.min.js"></script>
-<script>
-
-    function getMainHeight(){
-        let windowHeight = window.innerHeight
-        let bannerHeight = $(".banner").height()
-        let mainHeight = windowHeight - bannerHeight - 60 - 210
-        // document.querySelector(".main").style.height = mainHeight + 'px'
-        $('.main').height(mainHeight)
-    }
-
-    function getDouble(val){
-        val = val + ''
-        if(val.length > 1){
-            return val
-        }else{
-            return '0' + val
-        }
-    }
-
-    function getTime(){
-
-        let date = new Date()
-
-        return date.getFullYear() + '-' + getDouble(date.getMonth() + 1) + '-' + getDouble(date.getDate()) + ' ' + getDouble(date.getHours()) + ':' + getDouble(date.getMinutes())  + ':' + getDouble(date.getSeconds())
-    }
-
-     $(document).ready(function() {
-         if ($(window).width() > 768) {
-             $("#editor").emoji({
-                 button: "#btn",
-                 showTab: true,
-                 animation: 'slide',
-                 position: 'topRight',
-                 icons: [{
-                     name: "QQ表情",
-                     path: "dist/img/qq/",
-                     maxNum: 75,
-                     // excludeNums: [41, 45, 54],
-                     file: ".gif",
-                 }]
-             })
-             getMainHeight()
-             $(window).resize(function () {
-                 getMainHeight()
-             })
-         } else {
-             let windowHeight = window.innerHeight
-             let bannerHeight = parseInt($(".banner320").css('paddingTop'))
-             let mainHeight = windowHeight - bannerHeight - 50
-             $('.main320').height(mainHeight)
-             // $('.chat-end-info').html('bannerHeight = ' + bannerHeight)
-             let emojiSrc = {
-                 '[hehe]': 'dist/img/qq/1.gif'
-             }
-             let emojiAlias = {
-                 1: "hehe",
-                 2: "haha",
-                 3: "tushe",
-                 4: "a",
-                 5: "ku",
-                 6: "lu",
-                 7: "kaixin",
-                 8: "han",
-                 9: "lei",
-                 10: "heixian",
-                 11: "bishi",
-                 12: "bugaoxing",
-                 13: "zhenbang",
-                 14: "qian",
-                 15: "yiwen",
-                 16: "yinxian",
-                 17: "tu",
-                 18: "yi",
-                 19: "weiqu",
-                 20: "huaxin",
-                 21: "hu",
-                 22: "xiaonian",
-                 23: "neng",
-                 24: "taikaixin",
-                 25: "huaji",
-                 26: "mianqiang",
-                 27: "kuanghan",
-                 28: "guai",
-                 29: "shuijiao",
-                 30: "jinku",
-                 31: "shengqi",
-                 32: "jinya",
-                 33: "pen",
-                 34: "aixin",
-                 35: "xinsui",
-                 36: "meigui",
-                 37: "liwu",
-                 38: "caihong",
-                 39: "xxyl",
-                 40: "taiyang",
-                 41: "qianbi",
-                 42: "dnegpao",
-                 43: "chabei",
-                 44: "dangao",
-                 45: "yinyue",
-                 46: "haha2",
-                 47: "shenli",
-                 48: "damuzhi",
-                 49: "ruo",
-                 50: "OK"
-             }
-
-             for (let i = 1; i <= 75; i++) {
-                 //<img src="dist/img/qq/${emojiAlias[i]}.gif" alt="" data-alias="[${emojiAlias[i]}]">
-                 $('.popup-emoji').append(`
-                    <span>
-                        <img src="dist/img/qq/${i}.gif" alt="" data-alias="[${i}]">
-                    </span>
-                 `)
-             }
-
-             $('.popup-emoji').on("click", "span", function () {
-                 // $('#editor320').append(`<img src="${$(this).children()[0].src}"/>`)
-                 let alias = $(this).children().attr('data-alias')
-                 $('.input-txt320').val($('.input-txt320').val() + alias)
-             })
-         }
-
-         $('.send').click(function () {
-             let txtVal = $('.input-txt').html()
-             if (txtVal.trim()) {
-                 $('.main-container').append(`
-                    <div class="main-cell main-customer-cell">
-                        <div class="main-cell-head">
-                            <mip-img layout="responsive" width="1" height="1" src="/img/customer_service_logo.png"></mip-img>
-                        </div>
-                        <div class="main-cell-info">
-                            <p class="content">
-                                ${txtVal}
-                            </p>
-                        </div>
-                    </div>
-                `)
-                 $('.input-txt').html('')
-                 setTimeout(function () {
-                     $(".main").scrollTop($(".main-container").height())
-                 }, 0)
-             }
-         })
-
-         $('.input-txt').keydown(function (e) {
-             if (e.keyCode === 13 && e.ctrlKey) {
-                 // 这里实现换行
-                 $('.input-txt').val($('.input-txt').val() + "\n")
-             } else if (e.keyCode === 13) {
-                 // 避免回车键换行
-                 e.preventDefault();
-                 // 下面写你的发送消息的代码
-                 $(".send").trigger("click");
-             }
-         })
-
-         $('#upload').click(function () {
-             $('#upload-txt').click()
-         })
-
-
-         $('#upload-txt').change(function (e) {
-             let reads = new FileReader();
-             let file = e.target.files[0];
-             if (file) {
-                 reads.readAsDataURL(file);
-                 reads.onload = function () {
-                     let img = new Image()
-                     let result = this.result
-                     img.src = result
-                     img.onload = function () {
-                         let width = this.width < 800 ? this.width : 800
-                         //  <span style="width: ${width}px; display: inline-block">
-                         //     <mip-img layout="responsive" width="${width}" height="${this.height}" popup src="${result}"></mip-img>
-                         // </span>
-                         $('.main-container').append(`
-                            <div class="main-cell main-customer-cell">
-                                <div class="main-cell-head">
-                                    <mip-img layout="responsive" width="1" height="1" src="/img/customer_service_logo.png"></mip-img>
-                                </div>
-                                <div class="main-cell-info">
-                                    <p class="content">
-                                        <img src="${result}" alt="" style="width: ${width}px;">
-                                    </p>
-                                </div>
-                            </div>
-                         `)
-                         setTimeout(function () {
-                             $(".main").scrollTop($(".main-container").height())
-                         }, 0)
-                     }
-                 }
-             }
-         })
-
-         $('.main320').click(function(e){
-             e.stopPropagation()
-             $('.input320').css({bottom: '-125px'})
-             $('.main320').css({paddingBottom: '0px'})
-         })
-
-         $('#btn320').click(function (e) {
-             e.stopPropagation();
-             $('.popup-photo').css({display: 'none'})
-             $('.popup-emoji').css({display: 'flex'})
-             $('.input320').css({bottom: '0px'})
-             $('.main320').css({paddingBottom: '125px'})
-             setTimeout(function () {
-                 $(".main320").scrollTop($(".main-container320").height())
-             }, 0)
-         })
-
-         $('.add').click(function (e) {
-             e.stopPropagation();
-             $('.popup-emoji').css({display: 'none'})
-             $('.popup-photo').css({display: 'flex'})
-             $('.input320').css({bottom: '0px'})
-             $('.main320').css({paddingBottom: '125px'})
-             setTimeout(function () {
-                 $(".main320").scrollTop($(".main-container320").height())
-             }, 0)
-         })
-
-         $('.popup').click(function (e) {
-             e.stopPropagation();
-         })
-
-         $('#photo-wrapper').click(function () {
-             // console.log($('.upload-txt320'))
-             $('.upload-txt320').click()
-         })
-
-         $('#camera-wrapper').click(function () {
-             $('.camera-txt').click()
-         })
-
-         $('.input-txt320').focus(function (e) {
-             e.stopPropagation()
-             // console.log(111)
-             setTimeout(function(){
-                 $('body').scrollTop(1000000)
-             }, 100)
-         })
-
-         $('.upload-txt320, .camera-txt').change(function (e) {
-             let reads = new FileReader();
-             let file = e.target.files[0];
-             if (file) {
-                 reads.readAsDataURL(file)
-                 reads.onload = function () {
-                     let img = new Image()
-                     let result = this.result
-                     img.src = result
-                     img.onload = function () {
-                         let width = this.width < 230 ? this.width : 230
-                         $('.main-container320').append(`
-                             <p class="store-info">${getTime()}</p>
-                             <div class="main-cell320 main-customer-cell320">
-                             <div class="main-cell-info">
-                             <p class="content">
-                                <!--<img src="${this.result}" alt="" class="upload-img">-->
-                                <span style="width: ${width}px; display: inline-block">
-                                    <mip-img layout="responsive" width="${this.width}" height="${this.height}" popup src="${result}"></mip-img>
-                                </span>
-                             </p>
-                             </div>
-                                <img src="img/customer_service_logo.png" alt="">
-                             </div>
-                         `)
-                         setTimeout(function () {
-                             $(".main320").scrollTop($(".main-container320").height())
-                         }, 0)
-                     }
-                 }
-             }
-         })
-
-
-         $('.send320').click(function (e) {
-             e.stopPropagation();
-             // let txtVal = $('.input-txt320').html()
-             let txtVal = $('.input-txt320').val()
-             let reg = /\[([^\]]+)\]/g;
-             // let str = 'aaaabbbbcc[hehe][haha]dddd[haha1]eeeee';
-             txtVal = txtVal.replace(reg, "<img src='dist/img/qq/$1.gif' border='0' />");
-             if (txtVal.trim()) {
-                 $('.main-container320').append(`
-                    <p class="store-info">${getTime()}</p>
-                    <div class="main-cell320 main-customer-cell320">
-                        <div class="main-cell-info">
-                            <p class="content">
-                                ${txtVal}
-                            </p>
-                        </div>
-                        <img src="img/customer_service_logo.png" alt=""/>
-                    </div>
-                `)
-                 // $('.input-txt320').html('')
-                 $('.input-txt320').val('')
-                 setTimeout(function () {
-                     $(".main320").scrollTop($(".main-container320").height())
-                 }, 0)
-             }
-         })
-
-         $(window).click(function () {
-             $('.input320').css({bottom: '-125px'})
-             $('.main320').css({paddingBottom: '0px'})
-         })
-     })
-</script>
+<script src="js/customer-service.js"></script>
 </body>
 </html>
