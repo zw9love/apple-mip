@@ -75,12 +75,17 @@
         }
 
         main{
-            padding: 0 20px;
+            /*padding: 0 20px;*/
             overflow-x: hidden;
             overflow-y: auto;
             /*max-width: 1200px;*/
             margin: 0 auto;
-            height: 400px
+            height: 400px;
+            width: 100%;
+        }
+
+        main .main-container{
+            padding: 0 20px
         }
 
         main .main-tip{
@@ -235,13 +240,14 @@
             background-color: #f1f1f1;
             position: relative;
             padding: 0 20px;
+            line-height: 50px;
         }
 
         .input-nav img{
-            width: 22px;
+            width: 30px;
             vertical-align: middle;
-            margin-top: 14px;
-            margin-right: 20px
+            /*margin-top: 14px;*/
+            margin-right: 10px
         }
 
         .input-txt{
@@ -401,12 +407,12 @@
             }
 
             .operation{
-                height: 50px;
+                /*height: 50px;*/
                 background-color: #f3f3f3;
-                padding:0 10px;
+                padding: 10px;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                /*align-items: center;*/
             }
 
             .operation img:first-child{
@@ -624,6 +630,25 @@
                 color: #fff;
             }
 
+            .input-txt320 {
+                flex: 1;
+                min-height: 30px;
+                line-height: 2em;
+                _height: 30px;
+                max-height: 100px;
+                margin: 0 10px;
+                padding: 0 15px;
+                outline: 0;
+                background-color: #fff;
+                /*border: 1px solid #ccc;*/
+                font-size: 12px;
+                word-wrap: break-word;
+                overflow-x: hidden;
+                overflow-y: auto;
+                /*-webkit-user-modify: read-write-plaintext-only;*/
+                border-radius: 4px;
+            }
+
         }
     </style>
 </head>
@@ -646,19 +671,30 @@
                 <span class="nav-end-info">结束对话</span>
             </div>
         </div>
+
         <!--banner-->
-        <div class="banner">
-            <mip-img
-                    layout="responsive"
-                    width="1920"
-                    height="325"
-                    src="/img/customer_service_banner.jpg">
-            </mip-img>
-        </div>
+        <!--<div class="banner">-->
+            <!--<mip-img-->
+                    <!--layout="responsive"-->
+                    <!--width="1920"-->
+                    <!--height="325"-->
+                    <!--src="/img/customer_service_banner.jpg">-->
+            <!--</mip-img>-->
+        <!--</div>-->
 
         <!--main-->
         <main class="main">
+            <!--banner-->
+            <div class="banner">
+                <mip-img
+                        layout="responsive"
+                        width="1920"
+                        height="325"
+                        src="/img/customer_service_banner.jpg">
+                </mip-img>
+            </div>
             <div class="main-container">
+
                 <div class="main-tip"><span>2018-8-10 09:23:23 请求了对话</span></div>
                 <div class="main-cell main-service-cell">
                     <div class="main-cell-head">
@@ -854,9 +890,9 @@
         <!--用户输入-->
         <div class="input">
             <div class="input-nav">
-                <img src="img/customer_service_logo.png" alt="" id="btn"/>
+                <img src="img/smile.png" alt="" id="btn"/>
                 <!--onclick="document.getElementById('upload-txt').click()"-->
-                <img src="img/customer_service_logo.png" alt="" id="upload" />
+                <img src="img/add.png" alt="" id="upload" />
                 <input type="file" hidden id="upload-txt" accept="image/*">
             </div>
             <div id="editor" class="input-txt" placeholder="请在此输入..." contenteditable="true"></div>
@@ -865,25 +901,25 @@
     </div>
 
     <div class="container320">
-        <style>
-            .test-textarea {
-                width: 100%;
-                min-height: 26px;
-                line-height: 20px;
-                _height: 30px;
-                 max-height: 150px;
-                padding: 3px;
-                outline: 0;
-                border: 1px solid #ccc;
-                font-size: 12px;
-                word-wrap: break-word;
-                overflow-x: hidden;
-                overflow-y: auto;
-                -webkit-user-modify: read-write-plaintext-only;
-                border-radius: 4px;
-            }
-        </style>
-        <div class="test-textarea" contenteditable="true" ><br /></div>
+        <!--<style>-->
+            <!--.test-textarea {-->
+                <!--width: 100%;-->
+                <!--min-height: 26px;-->
+                <!--line-height: 20px;-->
+                <!--_height: 30px;-->
+                 <!--max-height: 150px;-->
+                <!--padding: 3px;-->
+                <!--outline: 0;-->
+                <!--border: 1px solid #ccc;-->
+                <!--font-size: 12px;-->
+                <!--word-wrap: break-word;-->
+                <!--overflow-x: hidden;-->
+                <!--overflow-y: auto;-->
+                <!-- -webkit-user-modify: read-write-plaintext-only;-->
+                <!--border-radius: 4px;-->
+            <!--}-->
+        <!--</style>-->
+        <!--<div class="test-textarea" contenteditable="true" ><br /></div>-->
         <!--导航-->
         <div class="backNav">
             <div class="myNav">
@@ -946,7 +982,8 @@
                 <img src="img/smile.png" alt="" id="btn320">
                 <img src="img/add.png" alt="" class="add">
                 <!--<input id="editor320" class="input-txt320" placeholder="请在此输入111..." type="search" autocomplete="off" autocomplete="off">-->
-                <input id="editor320" class="input-txt320" placeholder="请在此输入..." type=input>
+                <!--<input id="editor320" class="input-txt320" placeholder="请在此输入..." type=input>-->
+                <div class="input-txt320"  contenteditable="true" ></div>
                 <!--<textarea id="editor320" class="input-txt320" placeholder="请在此输入..."></textarea>-->
                 <!--<button class="send320">发送</button>-->
                 <!--<button id="openwebsocket">开启</button>-->

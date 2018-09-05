@@ -2,7 +2,8 @@ let ws = null
 
 // let server = 'ws://192.168.1.151:9090/'
 // let server = 'ws://192.168.1.125:9090/'
-let server = 'ws://192.168.0.103:9090/'
+// let server = 'ws://192.168.0.103:9090/'
+let server = 'ws://10.21.4.230:9090/'
 
 // function WebSocketTest() {
 //     if ("WebSocket" in window) {
@@ -42,8 +43,8 @@ function websocketOpenMobile() {
 
 function getMainHeight() {
     let windowHeight = window.innerHeight
-    let bannerHeight = $(".banner").height()
-    let mainHeight = windowHeight - bannerHeight - 60 - 210
+    // let bannerHeight = $(".banner").height()
+    let mainHeight = windowHeight - 60 - 210
     $('.main').height(mainHeight)
 }
 
@@ -113,18 +114,23 @@ $(document).ready(function () {
         $('.popup-emoji').on("click", "span", function () {
             // $('#editor320').append(`<img src="${$(this).children()[0].src}"/>`)
             let alias = $(this).children().attr('data-alias')
-            $('.input-txt320').val($('.input-txt320').val() + alias)
+            $('.input-txt320').html($('.input-txt320').html() + alias)
         })
     }
 
     // 开启websocket
     ws = new WebSocket(server);
 
+    // window.onbeforeunload = function() {
+    //     console.log('监听到onbeforeunload')
+    //     ws.close;
+    // };
+
     // 接收到信息
     ws.onmessage = function (evt) {
         let received_msg = JSON.parse(evt.data)
         console.log(received_msg)
-
+        ws.close();
         // PC端
         if(!mobileFlag){
             $('.main-container').append(`
@@ -354,8 +360,8 @@ $(document).ready(function () {
             // mobile点击发送按钮
             $('.send320').click(function (e) {
                 e.stopPropagation();
-                // let txtVal = $('.input-txt320').html()
-                let txtVal = $('.input-txt320').val()
+                let txtVal = $('.input-txt320').html()
+                // let txtVal = $('.input-txt320').val()
                 let time = getTime()
                 let reg = /\[([^\]]+)\]/g;
                 // let str = 'aaaabbbbcc[hehe][haha]dddd[haha1]eeeee';
@@ -373,8 +379,8 @@ $(document).ready(function () {
                         <img src="img/customer_service_logo.png" alt=""/>
                     </div>
                 `)
-                    // $('.input-txt320').html('')
-                    $('.input-txt320').val('')
+                    $('.input-txt320').html('')
+                    // $('.input-txt320').val('')
                     setTimeout(function () {
                         $(".main320").scrollTop($(".main-container320").height())
                     }, 0)
